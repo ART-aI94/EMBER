@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5E1D0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="EMBER"
+            android:textColor="#E96916"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:background="#F4CBAA"
+            android:padding="14dp"
+            android:text="Подтверждение почты"
+            android:textColor="#795A43"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="✉"
+            android:textColor="#E96916"
+            android:textSize="64sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Мы отправили письмо с подтверждением на адрес:"
+            android:textColor="#795A43"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/verificationEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="#B84F13"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Открой письмо и перейди по ссылке подтверждения. Затем вернись в приложение."
+            android:textColor="#795A43"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/checkVerificationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="#F58B35"
+            android:text="Я подтвердил почту"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/resendVerificationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#F4CBAA"
+            android:text="Отправить письмо повторно"
+            android:textColor="#795A43" />
+
+        <TextView
+            android:id="@+id/verificationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#795A43"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

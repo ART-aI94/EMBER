@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4DFCA">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- Заголовок -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Коллекции"
+                android:gravity="center"
+                android:textColor="#211812"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:fontFamily="serif" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:text="Исследуй разные стороны FromSoftware"
+                android:gravity="center"
+                android:textColor="#806B59"
+                android:textSize="18sp" />
+
+            <!-- Коллекция 1: Наследие Souls -->
+            <LinearLayout
+                android:id="@+id/collectionSouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFF5E9"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:src="@drawable/elden_ring"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Наследие Souls" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Наследие Souls"
+                        android:textColor="#211812"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Легендарные боссы, мрачные миры и испытания, которые проверят твои навыки."
+                        android:textColor="#806B59"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Dark Souls · Dark Souls II · Dark Souls III · Elden Ring · Bloodborne · Sekiro"
+                        android:textColor="#593820"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Коллекция 2: Стальные титаны -->
+            <LinearLayout
+                android:id="@+id/collectionArmored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="#FFF5E9"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:src="@drawable/armored_core3"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Стальные титаны" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Стальные титаны"
+                        android:textColor="#211812"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Боевые мехи, передовые технологии и сражения в мире будущего."
+                        android:textColor="#806B59"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Armored Core · Armored Core 2 · Armored Core 3 · Armored Core 4"
+                        android:textColor="#593820"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Коллекция 3: Тени ниндзя -->
+            <LinearLayout
+                android:id="@+id/collectionTenchu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="#FFF5E9"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:src="@drawable/tenchu_fatal_shadows"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Тени ниндзя" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Тени ниндзя"
+                        android:textColor="#211812"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Скрытные убийства, древняя Япония и путь воина, действующего незаметно."
+                        android:textColor="#806B59"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tenchu: Stealth Assassins · Tenchu: Fatal Shadows · Tenchu: Wrath of Heaven · Tenchu: Shadow Assassins"
+                        android:textColor="#593820"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Коллекция 4: Забытые миры -->
+            <LinearLayout
+                android:id="@+id/collectionForgotten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:background="#FFF5E9"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:src="@drawable/shadow_tower"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Забытые миры" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Забытые миры"
+                        android:textColor="#211812"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Редкие приключения, таинственные подземелья и классика из истории студии."
+                        android:textColor="#806B59"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="King's Field · Shadow Tower · Echo Night · Kuon · Lost Kingdoms · Eternal Ring и другие"
+                        android:textColor="#593820"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/collectionsBackBottom"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="← Назад"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#B84F13" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#E9CDB2">
+
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/home"
+                android:scaleType="fitCenter"
+                android:contentDescription="Главная" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/search"
+                android:scaleType="fitCenter"
+                android:contentDescription="Поиск" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navNews"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/news"
+                android:scaleType="fitCenter"
+                android:contentDescription="Новости" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navGuides"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/guide"
+                android:scaleType="fitCenter"
+                android:contentDescription="Гайды" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

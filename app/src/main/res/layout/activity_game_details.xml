@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4DFCA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Верхняя панель -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageButton
+                android:id="@+id/gameDetailsBack"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Назад"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="#211812" />
+
+        </FrameLayout>
+
+        <!-- Обложка игры -->
+        <ImageView
+            android:id="@+id/gameDetailsCover"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            android:background="#E9CDB2"
+            android:contentDescription="Обложка игры" />
+
+        <!-- Основная информация -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/gameDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Название игры"
+                android:textColor="#211812"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gameDetailsMetadata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="#806B59"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/gameDetailsDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textColor="#211812"
+                android:textSize="16sp"
+                android:lineSpacingExtra="7dp"
+                android:visibility="gone" />
+
+            <!-- Кнопка покупки -->
+            <Button
+                android:id="@+id/gameDetailsStoreButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#B84F13"
+                android:text="Купить игру"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- Системные требования -->
+            <LinearLayout
+                android:id="@+id/gameDetailsRequirements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Системные требования"
+                    android:textColor="#211812"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/requirementsToggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/requirementsMinimum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Минимальные"
+                        android:textColor="#211812" />
+
+                    <RadioButton
+                        android:id="@+id/requirementsRecommended"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Рекомендуемые"
+                        android:textColor="#211812" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/requirementsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="6dp"
+                    android:textColor="#806B59"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Галерея скриншотов -->
+            <LinearLayout
+                android:id="@+id/gameDetailsGallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Скриншоты"
+                    android:textColor="#211812"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/galleryImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:layout_marginTop="14dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E9CDB2"
+                    android:contentDescription="Скриншот игры" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/galleryPrevious"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Предыдущий скриншот"
+                        android:src="@android:drawable/ic_media_previous"
+                        app:tint="#B84F13" />
+
+                    <TextView
+                        android:id="@+id/galleryCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="1 / 1"
+                        android:textColor="#211812"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/galleryNext"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Следующий скриншот"
+                        android:src="@android:drawable/ic_media_next"
+                        app:tint="#B84F13" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Комментарии -->
+        <LinearLayout
+            android:id="@+id/commentsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Обсуждение"
+                android:textColor="#211812"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/commentsCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Комментарии"
+                android:textColor="#806B59"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/commentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="#B84F13"
+                android:gravity="top|start"
+                android:hint="Поделись своим мнением об игре..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="1000"
+                android:minHeight="110dp"
+                android:padding="12dp"
+                android:textColor="#211812"
+                android:textColorHint="#9B8776" />
+
+            <Button
+                android:id="@+id/sendCommentButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#B84F13"
+                android:text="Опубликовать"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/commentsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

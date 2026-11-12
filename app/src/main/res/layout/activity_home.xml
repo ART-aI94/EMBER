@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F4DFCA">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="EMBER"
+                            android:textColor="#E96916"
+                            android:textSize="45sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:letterSpacing="0.12"
+                            android:shadowColor="#55E96916"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="12" />
+
+                        <TextView
+                            android:id="@+id/profileButton"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:gravity="center"
+                            android:text="👤"
+                            android:textSize="23sp"
+                            android:background="#F4CBAA"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="Профиль" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="BEYOND THE FOG"
+                        android:textColor="#8C7868"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.24" />
+
+                    <View
+                        android:layout_width="54dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#E96916" />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Игры FromSoftware"
+                    android:textColor="#17120F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/gameEldenRingHome"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:src="@drawable/elden_ring"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Elden Ring" />
+
+                    <ImageView
+                        android:id="@+id/gameBloodborneHome"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="3dp"
+                        android:src="@drawable/bloodborne"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Bloodborne" />
+
+                    <ImageView
+                        android:id="@+id/gameSekiroHome"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/sekiro"
+                        android:scaleType="centerCrop"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Sekiro" />
+
+                </LinearLayout>
+
+
+                <!-- Заголовок новостей -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Последние новости"
+                        android:textColor="#17120F"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:id="@+id/allNewsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Все  →"
+                        android:textColor="#B84F13"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:padding="6dp" />
+
+                </LinearLayout>
+
+                <!-- Последние новости загружаются из кэша RSS в HomeActivity -->
+                <LinearLayout
+                    android:id="@+id/homeNewsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Игра дня"
+                    android:textColor="#17120F"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:background="#201A16"
+
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:src="@drawable/elden_ring"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Обложка Elden Ring" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="EMBER CHOICE  •  ИГРА ДНЯ"
+                        android:textColor="#FF8526"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Elden Ring"
+                        android:textColor="#FFF3E5"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="2022  •  Action RPG  •  Открытый мир"
+                        android:textColor="#C7B7A8"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Исследуй Междуземье, сражайся с могущественными боссами и раскрой тайны мира Elden Ring."
+                        android:textColor="#E8DCD0"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="3dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="★  96/100 Metacritic"
+                        android:textColor="#FF8526"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/gameOfDayCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:background="#FF8526"
+                        android:text="Подробнее об игре  →"
+                        android:textColor="#20140C"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#E9CDB2">
+
+            <FrameLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#F5B77C"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Главная" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/navSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/search"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Поиск" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/navNews"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/news"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Новости" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/navGuides"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/guide"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Гайды" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

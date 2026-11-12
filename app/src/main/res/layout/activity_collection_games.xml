@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4DFCA">
+
+    <!-- Заголовок коллекции -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/collectionGamesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Коллекция"
+            android:textColor="#211812"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:fontFamily="serif" />
+
+    </LinearLayout>
+
+    <!-- Карточка описания коллекции -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:background="#FFF5E9"
+        android:padding="14dp"
+        android:elevation="2dp">
+
+        <!-- Оранжевый акцент -->
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="#B84F13" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О КОЛЛЕКЦИИ"
+                android:textColor="#B84F13"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/collectionGamesDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Описание коллекции"
+                android:textColor="#594638"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:fontFamily="sans" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Список игр -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/collectionGamesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Кнопка назад внизу -->
+    <Button
+        android:id="@+id/collectionGamesBackBottom"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:text="← Назад к коллекциям"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B84F13" />
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#E9CDB2">
+
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/home"
+                android:contentDescription="Главная" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/search"
+                android:contentDescription="Поиск" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navNews"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/news"
+                android:contentDescription="Новости" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/navGuides"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/guide"
+                android:contentDescription="Гайды" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

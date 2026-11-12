@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#F5E1D0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="EMBER"
+                android:textColor="#E96916"
+                android:textSize="38sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="8dp"
+                android:background="#F4CBAA"
+                android:text="Регистрация"
+                android:textColor="#795A43"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/registerLoginInput"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="35dp"
+                android:paddingHorizontal="16dp"
+                android:hint="Login"
+                android:singleLine="true"
+                android:inputType="text"
+                android:backgroundTint="#FF851B"/>
+
+            <EditText
+                android:id="@+id/registerPasswordInput"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="16dp"
+                android:hint="Password"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:backgroundTint="#FF851B"/>
+
+            <EditText
+                android:id="@+id/registerEmailInput"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:paddingHorizontal="16dp"
+                android:hint="Email"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="#FF851B"/>
+
+            <ImageView
+                android:id="@+id/selectedAvatarPreview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:contentDescription="Выбранный аватар" />
+
+            <Button
+                android:id="@+id/selectAvatarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#F4CBAA"
+                android:text="Выбрать аватар"
+                android:textColor="#795A43" />
+
+
+            <CheckBox
+                android:id="@+id/licenseCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:buttonTint="#F58B35"
+                android:text="Я принимаю лицензионное соглашение"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/licenseText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="12dp"
+                android:text="Посмотреть условия соглашения"
+                android:textColor="#A65B22"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/continueRegisterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Вперёд"
+                android:textColor="#49382C"
+                android:backgroundTint="#F5A45B"/>
+
+            <TextView
+                android:id="@+id/backToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="8dp"
+                android:text="Уже есть аккаунт? Войти"
+                android:textColor="#795A43"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
